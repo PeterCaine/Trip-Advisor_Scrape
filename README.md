@@ -1,6 +1,8 @@
 # Trip-Advisor_Scrape
 Scraping Trip Advisor using Python and Selenium
 
+## install
+
 - download and install selenium (https://selenium-python.readthedocs.io/installation.html or pip install selenium)
 - download and install geckodriver (for Firefox): https://github.com/mozilla/geckodriver/releases (this can be placed directly into the folder where you run your .py files from (or ipynb notebook, or added to path))
 
@@ -9,7 +11,7 @@ Scraping Trip Advisor requires a few decisions to be made on the part of the use
 - How many reviews per airline. 
 It also takes a while, so if you want to do a little this time and wish to continue where you left off last time, that adds even more options.
 
-
+## prompts
 At the beginning of the programme you are prompted to:
 - enter the path to geckodriver (Linux - only - windows users should put driver in same directory as .py files otherwise add to PATH)
 - add the number of Trip Advisor pages of companies to scrape (5 companies per page)
