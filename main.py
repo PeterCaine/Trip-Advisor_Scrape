@@ -35,7 +35,8 @@ def main ():
         
 if __name__ == "__main__":
     
-    if platform.system() == "linux" or platform.system() == "linux2":
+    if platform.system() == "Linux" or platform.system() == "Linux2" or platform.system() == "Darwin":
+        print (platform.system())
         prompt = "Enter path to geckodriver (default is current working directory): "
         path_input = input(prompt)
         if path_input == '':
