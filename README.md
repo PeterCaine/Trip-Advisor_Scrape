@@ -17,7 +17,7 @@ At the beginning of the programme you are prompted to:
 - add the number of Trip Advisor pages of companies to scrape (5 companies per page)
 - add the start page (if you have previously scraped 10 pages, enter 11 to continue where you left off)
 - enter number of reviews per company (experimentation showed that around 1500 was possible without connection issues - max values are prone to errors midway. The pickle files will still write out, but it's still annoying).
-- at what point do you wish to start (the pickle files are written with the name of the airline and number of pages of reviews scraped - you can continue by entering the next number (if there are any more to scrape)).
+- at what point do you wish to start (the pickle files are written with the name of the airline and number of pages of reviews scraped (e.g. Adria-Airways-No-Longer-Operating_0-4.pkl)-you can continue by entering the next number if there are any more reviews to scrape).
 
 ## Output
 
