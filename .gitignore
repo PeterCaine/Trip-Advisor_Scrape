@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#selenium
+geckodriver
+geckodriver.log
+
+# airlines folder
+airline_pickles/
