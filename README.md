@@ -21,14 +21,12 @@ At the beginning of the programme you are prompted to:
 
 ## Output
 
-- a pickle file is output containing a binary version of the raw html of each review. file "sample_pickle_extract.py" is an example of how to extract info about:
-- reviewer, 
-- review date, 
-- overall rating, 
-- flight, 
-- title of review, 
-- text of review, 
-These are extracted to a dictionary
-
+- a pickle file is output containing a binary version of the raw html of each review. file "sample_pickle_extract.py" is an example of how to extract to dictionary info about:
+    - reviewer, 
+    - review date, 
+    - overall rating, 
+    - flight, 
+    - title of review, 
+    - text of review, 
 - a txt file of the companies scraped is also output to the airline_pickles folder.
 - large files (i.e. large numbers of scraped reviews) take a while to write out. Patience is required.
