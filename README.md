@@ -2,9 +2,9 @@
 Scraping Trip Advisor using Python and Selenium
 
 ### warning
-Tripadvisor seems to update their code and labels meaning that the tags used to find reviews may not work after a few weeks/months
+Tripadvisor updates their identifiers meaning that the tags used to find reviews may not work after a few weeks/months; <reminder to put up a 'how to modify'>
 
-## Install
+## required installs
 
 - download and install selenium (https://selenium-python.readthedocs.io/installation.html or pip install selenium)
 - download and install geckodriver (for Firefox): https://github.com/mozilla/geckodriver/releases (this can be placed directly into the folder where you run your .py files from (or ipynb notebook, or added to path))
@@ -24,7 +24,7 @@ At the beginning of the programme you are prompted to:
 
 ## Output
 
-- a pickle file is output containing a binary version of the raw html of each review. file "sample_pickle_extract.py" is an example of how to extract to dictionary info about:
+- a pickle file is output containing a binary version of the raw html around each review. File "sample_pickle_extract.py" is an example of how to extract to dictionary info about:
     - reviewer, 
     - review date, 
     - overall rating, 
