@@ -24,7 +24,7 @@ At the beginning of the programme you are prompted to:
 
 ## Output
 
-- a pickle file is output containing a binary version of the raw html of each review. file "sample_pickle_extract.py" is an example of how to extract to dictionary info about:
+- a pickle file is output containing a binary version of the raw html around each review. File "sample_pickle_extract.py" is an example of how to extract to dictionary info about:
     - reviewer, 
     - review date, 
     - overall rating, 
