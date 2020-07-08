@@ -1,6 +1,9 @@
 # Trip-Advisor_Scrape
 Scraping Trip Advisor using Python and Selenium
 
+### warning
+Tripadvisor seems to update their code and labels meaning that the tags used to find reviews may not work after a few weeks/months
+
 ## Install
 
 - download and install selenium (https://selenium-python.readthedocs.io/installation.html or pip install selenium)
