@@ -11,12 +11,15 @@ Tripadvisor updates their identifiers meaning that the tags used to find reviews
 
 ## Prompts
 Scraping Trip Advisor requires a few decisions to be made on the part of the user:
-- how many airlines; 
+- whether you wish to scrape select airlines or any 
+- the page you wish to start from (for select)
+- how many airlines (for any); 
 - how many reviews per airline. 
 It also takes a while, so if you want to do a little this time and wish to continue where you left off last time, that adds more options.
 
 At the beginning of the programme you are prompted to:
 - enter the path to geckodriver (Linux/ Mac only - windows users should put driver in same directory as .py files otherwise add to PATH)
+- choose a select or indiscriminate scrape
 - add the number of Trip Advisor pages of companies to scrape (5 companies per page)
 - add the start page (if you have previously scraped 10 pages, enter 11 to continue where you left off)
 - enter number of reviews per company (experimentation showed that around 1500 was possible without connection issues - max values are prone to errors midway. The pickle files will still write out, but it's still annoying).
