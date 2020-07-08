@@ -63,8 +63,7 @@ def trip_advisor_scrape(driver, url, start=0, num_reviews=1500):
         except:
             pass
         soup = BeautifulSoup(driver.page_source, 'html.parser')
-        review_soup = soup.find_all('div', attrs={
-                                    'class': 'location-review-card-Card__ui_card--2Mri0 location-review-card-Card__card--o3LVm location-review-card-Card__section--NiAcw'})
+        review_soup = soup.find_all('div', attrs={'class': 'Dq9MAugU T870kzTX LnVzGwUB'})
         soup_list.append(review_soup)
         try:
             button = driver.find_element_by_link_text("Next")
@@ -78,4 +77,4 @@ def trip_advisor_scrape(driver, url, start=0, num_reviews=1500):
     print('finished at review number: ', n+1)
     
     sys.setrecursionlimit(10000)
-    pickle.dump(soup_list, open(f'./airline_pickles/{basename}_{start}-{start + n}.pkl', 'wb'))
+    pickle.dump(soup_list, open(f'./airline_pickles/{basename}_{start}-{start + n}.pkl', 'wb')) 
