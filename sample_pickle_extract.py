@@ -12,72 +12,61 @@ def data_in_fives(file):
     '''
     all_data_in_fives = []
     for n, line in enumerate(file):
+
+    #     print(n)
         line = str(line)
         soup = BeautifulSoup(line, 'lxml')
 
-        who_when_list = soup.find_all(
-            'div', {'class': 'social-member-event-MemberEventOnObjectBlock__event_type--3njyv'}, limit=5)
+        who_when_list = soup.find_all('div',{'class':"_2fxQ4TOx"}, limit = 5)
         who = []
         when = []
         try:
             for who_when in who_when_list:
-
                 who_when_split = who_when.text.split(' wrote a review ')
                 who.append(who_when_split[0])
                 when.append(who_when_split[1])
         except:
-            print(n, 'who_when')
+            print(n)
             pass
 
-        ratings_list = soup.find_all('div', {'data-test-target': 'review-rating'})
+        ratings_list = soup.find_all('div', {'data-test-target':'review-rating'})
         ratings = []
         try:
             for rating in ratings_list:
                 rate = str(rating)
                 ratings.append(rate[-17])
         except:
-
             print(n, 'ratings')
             pass
 
-        flight_list = soup.find_all(
-            'div', {'class': 'location-review-review-list-parts-RatingLine__labelBtn--e58BL'})
+        flight_type_list = soup.find_all('div',{'class': 'hpZJCN7D'})
         flights = []
         try:
-            for flight in flight_list:
-                flights.append(flight.text)
-            # split into 3s
-            separated_flights = zip(*[iter(flights)]*3)
-            final_flights = []
-            for flight in separated_flights:
-                concat_flights = ', '.join(flight)
-                final_flights.append(concat_flights)
+            for flight_type in flight_type_list:
+                flight_soup = BeautifulSoup(str(flight_type), 'lxml')
+                three_elements = flight_soup.find_all('div',{'class': '_3tp-5a1G'})
+                flight = [element.text for element in three_elements]
+                flights.append (', '.join(flight))
         except:
             print(n, 'flights')
             pass
 
-        title_list = soup.find_all(
-            'div', {'class': 'location-review-review-list-parts-ReviewTitle__reviewTitle--2GO9Z'})
+
+        title_list = soup.find_all('div',{'data-test-target': 'review-title'})
         titles = []
-        try:
-            for title in title_list:
-                titles.append(title.text)
-        except:
-            print(n, 'titles')
-            pass
+        for title in title_list:
+            titles.append(title.text)
 
-        text_list = soup.find_all(
-            'q', {'class': 'location-review-review-list-parts-ExpandableReview__reviewText--gOmRC'})
-        try:
-            texts = []
-
+        text_list = soup.find_all('q', {'class':'IRsGHoPm'})
+        texts = []
+        try: 
             for text in text_list:
                 texts.append(text.text)
         except:
             print(n, 'texts')
             pass
 
-        all_data = zip(who, when, ratings, final_flights, titles, texts)
+        all_data = zip(who, when, ratings, flights, titles, texts)
         all_data_in_fives.append(all_data)
     return all_data_in_fives
 
@@ -85,7 +74,7 @@ def data_in_fives(file):
 def dict_builder(all_data_in_fives):
     '''
     takes list of 5 review details; constructs 1 large dictionary effectively
-    concatenating the data ready for dataframe construction
+    concatenating the data ready for datafframe construction
     '''
     keys = ['reviewer', 'review_date', 'rating', 'flight', 'title', 'text']
     final_dict = {}
