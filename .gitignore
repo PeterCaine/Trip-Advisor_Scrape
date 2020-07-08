@@ -131,6 +131,7 @@ dmypy.json
 
 #selenium
 geckodriver
+geckodriver.exe
 geckodriver.log
 
 # airlines folder

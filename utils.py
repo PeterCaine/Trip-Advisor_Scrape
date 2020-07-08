@@ -64,7 +64,7 @@ def trip_advisor_scrape(driver, url, start=0, num_reviews=1500):
             pass
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         review_soup = soup.find_all('div', attrs={'class': 'Dq9MAugU T870kzTX LnVzGwUB'})
-        soup_list.append(review_soup)
+        soup_list.append(str(review_soup))
         try:
             button = driver.find_element_by_link_text("Next")
             button.click()
