@@ -2,7 +2,9 @@
 Scraping Trip Advisor using Python and Selenium
 
 ### warning
-Tripadvisor updates their identifiers meaning that the tags used to find reviews may not work after a few weeks/months; <reminder to put up a 'how to modify'>
+Tripadvisor updates their identifiers meaning that the tags used to find reviews may not work after a few weeks/months; if you are getting empty lists as output, TA may have updated their code. 
+
+This video will help you find the new identifiers to be able to modify the code for yourself: https://www.youtube.com/watch?v=C4oW_MCzmSg
 
 ## required installs
 
