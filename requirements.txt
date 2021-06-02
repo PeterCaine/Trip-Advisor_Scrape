@@ -1,6 +1,7 @@
-beautifulsoup4==4.9.1
+-i https://pypi.org/simple/
+beautifulsoup4==4.9.3
 bs4==0.0.1
 selenium==3.141.0
-soupsieve==2.0.1
+soupsieve==2.2.1 ; python_version >= '3.0'
 tqdm==4.47.0
-urllib3==1.25.9
+urllib3==1.26.5
